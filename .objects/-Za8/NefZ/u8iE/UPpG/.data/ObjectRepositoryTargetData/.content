@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="e2tah_kuVUSLpLT0l_Er1w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay269" DesignTimeRectangle="676, 952, 70, 38" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT publication_year'" FullSelectorArgument="&lt;webctrl tag='INPUT' name='publication_year' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' name='publication_year' /&gt;" Guid="23fd7782-0309-4f99-9888-a91cda99181f" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="676, 892, 565, 26" ElementType="Text" FriendlyName="'Publication Year'" FullSelectorArgument="&lt;webctrl tag='LABEL' innertext='Publication Year * Publication Year, required field' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' innertext='Publication Year * Publication Year, required field' check:text='Publication Year * Publication Year, required field' /&gt;" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="1b52579eb8fee5660821dffbdd859331.png" xmlns="">0ciLtp1DTlki33c_SsemEyA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,16 @@
+﻿{
+  "Name": "year",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "UPpGM6DKj0-QkdprYony2g",
+  "Reference": "O_gWsQZ_40yn-PKfMjq0sg/UPpGM6DKj0-QkdprYony2g",
+  "ParentRef": "O_gWsQZ_40yn-PKfMjq0sg/u8iEErMGHkuRv8qnHCYQ7A",
+  "Created": "2023-10-19T23:48:06.6661115Z",
+  "Updated": "2023-10-19T23:53:22.7168384Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

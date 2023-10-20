@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="CCM6U6q1V0CVd6fL0IrxSQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://bpl.bibliocommons.com/suggested_purchases" DesignTimeRectangle="1631, 582, 158, 46" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Add Suggestion'" FullSelectorArgument="&lt;webctrl tag='BUTTON' innertext='Add Suggestion' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' innertext='Add Suggestion' check:text='Add Suggestion' /&gt;" Guid="20365e36-d17b-4be1-947e-acddb7669795" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="48f1d3655113736c0f29edb38658be44.png" xmlns="">09jIsfQKp4UKkkQmkMlPeZQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="ihiS9fXDG0Ca75wosQoteg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay283" DesignTimeRectangle="677, 678, 563, 33" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Adult'" FullSelectorArgument="&lt;webctrl tag='A' innertext='Adult' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' innertext='Adult' check:text='Adult' /&gt;" Guid="32a989e3-7c17-47c0-a5f2-a504082bc71e" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="676, 562, 81, 24" ElementType="Text" FriendlyName="'Audience'" FullSelectorArgument="&lt;webctrl tag='SPAN' innertext='Audience' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' innertext='Audience' check:text='Audience' /&gt;" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="8d3ab0d8f8dd8d8a1b9ba40f7267df5b.png" xmlns="">0sds89nAj3k-77lW7D89nHQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

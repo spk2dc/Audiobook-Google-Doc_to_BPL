@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="d872nrqr2kCr7vWfJ1Dv5w" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay269" DesignTimeRectangle="676, 828, 565, 38" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'INPUT author'" FullSelectorArgument="&lt;webctrl id='author' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='author' tag='INPUT' /&gt;" Guid="7e7b1a43-2299-4c65-92df-963aafcfb0c3" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="676, 746, 565, 26" ElementType="Text" FriendlyName="'Author, Performer,'" FullSelectorArgument="&lt;webctrl tag='LABEL' innertext='Author, Performer, or Director * Author, Performer, or Director, required field' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' innertext='Author, Performer, or Director * Author, Performer, or Director, required field' check:text='Author, Performer, or Director * Author, Performer, or Director, required field' /&gt;" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e63ba8a39fb1bef23e42d9a3986076df.png" xmlns="">0owSiz2DUxUCPRDaL-Tqj4Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

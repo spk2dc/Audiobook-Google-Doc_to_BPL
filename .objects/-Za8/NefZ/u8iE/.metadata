@@ -1,0 +1,15 @@
+﻿{
+  "Name": "overlay",
+  "Type": "Screen",
+  "Id": "u8iEErMGHkuRv8qnHCYQ7A",
+  "Reference": "O_gWsQZ_40yn-PKfMjq0sg/u8iEErMGHkuRv8qnHCYQ7A",
+  "ParentRef": "O_gWsQZ_40yn-PKfMjq0sg/NefZu6X0oka1hUKLXWt57A",
+  "Created": "2023-10-19T23:39:19.5807656Z",
+  "Updated": "2023-10-19T23:39:38.2535082Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.8.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
