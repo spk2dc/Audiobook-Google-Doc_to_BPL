@@ -1,10 +1,11 @@
 {
-  "name": "Audiobook Google Doc to BPL",
+  "name": "BPL",
   "projectId": "118c0c39-7e39-4c9f-8bea-e5baa758d63a",
-  "description": "Request audiobooks on a Google Doc list from FCPL\r\n",
+  "description": "Request audiobooks on a Google Doc list from BPL\r\n",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.22.1-preview]",
+    "UiPath.GSuite.Activities": "[2.4.3]",
     "UiPath.Mail.Activities": "[1.20.3]",
     "UiPath.System.Activities": "[23.10.0-preview]",
     "UiPath.Testing.Activities": "[23.10.0-preview]",

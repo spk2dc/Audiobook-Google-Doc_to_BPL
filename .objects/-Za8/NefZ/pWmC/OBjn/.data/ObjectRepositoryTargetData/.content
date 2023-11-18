@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="DnI_qEMqaUWANYT0KuPuOQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://bpl.bibliocommons.com/user/login?destination=%2Fsuggested_purchases" DesignTimeRectangle="140, 642, 100, 39" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Log In'" FullSelectorArgument="&lt;webctrl tag='H1' innertext='     Log In   ' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H1' innertext='     Log In   ' check:text='Log In' /&gt;" Guid="c8e5dc4f-1154-4b8b-bf81-fc5807652d1a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log In | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="140, 702, 312, 26" ElementType="Text" FriendlyName="'Username or'" FullSelectorArgument="&lt;webctrl tag='LABEL' innertext='Username or Library Card Number :' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' innertext='Username or Library Card Number :' check:text='Username or Library Card Number :' /&gt;" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="e2f7ae47ce122c5a5cf9b3c5323b3735.png" xmlns="">0ZZOGePRq_USBe3Q52IgtuA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

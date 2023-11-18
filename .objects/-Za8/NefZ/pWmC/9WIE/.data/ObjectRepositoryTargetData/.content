@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="dyWP17Uwy0ClP9m3tg9vGQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://bpl.bibliocommons.com/user/login?destination=%2Fsuggested_purchases" DesignTimeRectangle="140, 809, 250, 38" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FriendlyName="'INPUT user_pin_9kqfr2pc…'" FullSelectorArgument="&lt;webctrl type='password' name='user_pin' /&gt;" FuzzySelectorArgument="&lt;webctrl type='password' name='user_pin' /&gt;" Guid="11a32474-3fe3-4e97-8981-01bc035dd5d1" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log In | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="140, 779, 312, 26" ElementType="Text" FriendlyName="'PIN'" FullSelectorArgument="&lt;webctrl tag='LABEL' innertext='     PIN :   ' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' innertext='     PIN :   ' check:text='PIN :' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAATwAAAAeCAYAAACxFqKPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIbSURBVHhe7dpBa9pgHMfxvQyph46eVnbYoDsIYz3Iyg67jFEY6KCFjsFgFAoO1oEIUhi4Qz1Yhh6khzDYA4IIplAvvrPf0po0OmOMwyaw53v4gOT5P9HTlyTmQW4jLwCwAcEDYA2CB8AaBA+ANQgeAGsQPADWIHgArEHwAFhjJnj7NUfj68GckWmr87moR5Gzjs73guNFnZupvaaq/ak9Ex906a+7teJfawBwfxIFLzBqHWhnbjYmeB5z8uTu/BMED0A2FgTPUetdQS8LBZWO6jKDIGBdnRXmZ+OCNx42VXkcfgfBA5CVhcELI5ZXqR5e+V1+jJsNg2faFxr5e9zvb7Tlnytp8HYOf8i98uaGXTWmfgsA/KvVg3cYNxsGz62VdeZMPt9eGT4PZpIFr/Iz2DtQ/9uLyBkAWMWSW9rX+vS1KdcPz/j6Qqf+7eny4BW19bYe7u0ea/d2his8ANlY6U+LfvXV3a1pkuDlNrZVafX8uZ467x96xw54hgcgE8uDd9XT6FdTjdKzqedwSYPnHXt6LBOcy1RV2oyYAYAUJHqGFyVx8GZmBzJfygQPQCZSCV5us6xO8GrL0JHbj5gBgHuWTvA8uydtfz4UFzz+tACwbqkF72at8XuyFogLHq+lAFi3FIOXn31NZcFMgCs8AOs2EzwA+J8RPADWIHgArEHwAFiD4AGwBsEDYA2CB8AaBA+ANQgeAEvk9QdgQrQwQBLVFAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="d8b6f19dcb55a437fd7d8f7b78dabeb5.png" xmlns="">0frJkbMXVkkenrRUvjHboTQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
