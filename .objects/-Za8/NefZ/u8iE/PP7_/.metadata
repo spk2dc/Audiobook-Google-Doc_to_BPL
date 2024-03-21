@@ -1,0 +1,16 @@
+﻿{
+  "Name": "already owned",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "PP7_Mw4wgUyn4OTDbqKL-Q",
+  "Reference": "O_gWsQZ_40yn-PKfMjq0sg/PP7_Mw4wgUyn4OTDbqKL-Q",
+  "ParentRef": "O_gWsQZ_40yn-PKfMjq0sg/u8iEErMGHkuRv8qnHCYQ7A",
+  "Created": "2024-03-14T22:42:31.1333452Z",
+  "Updated": "2024-03-14T22:44:08.0664498Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

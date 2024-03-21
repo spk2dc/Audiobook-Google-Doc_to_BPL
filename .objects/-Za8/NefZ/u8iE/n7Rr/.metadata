@@ -1,0 +1,16 @@
+﻿{
+  "Name": "cancel",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "n7Rr3XVnEUKLPYBqEQHeGg",
+  "Reference": "O_gWsQZ_40yn-PKfMjq0sg/n7Rr3XVnEUKLPYBqEQHeGg",
+  "ParentRef": "O_gWsQZ_40yn-PKfMjq0sg/u8iEErMGHkuRv8qnHCYQ7A",
+  "Created": "2024-03-14T22:44:46.5658075Z",
+  "Updated": "2024-03-14T22:46:59.8474315Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=23.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

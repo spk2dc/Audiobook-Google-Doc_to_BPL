@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="pGuQNbn87E-pGPhYm15oZQ" Reference="O_gWsQZ_40yn-PKfMjq0sg/g-MEzt11W06vZZp19K63XA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay474" DesignTimeRectangle="676, 346, 565, 26" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'You already'" FullSelectorArgument="&lt;webctrl tag='P' visibleinnertext='You already suggested the following on Mar 18, 2024:' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' visibleinnertext='You already suggested the following*' check:text='You already suggested the following*' /&gt;" Guid="e9239be3-d113-4a2b-a3f2-275a9961ac1a" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="676, 291, 290, 41" ElementType="Text" FriendlyName="'Submit a Suggestion'" FullSelectorArgument="&lt;webctrl tag='SPAN' visibleinnertext='Submit a Suggestion' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' visibleinnertext='Submit a Suggestion' check:text='Submit a Suggestion' /&gt;" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="d1acffbcbb94a40d0f9777dd3132739b.png" xmlns="">0XZUy4AJhjku3cEv9XzGj6Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

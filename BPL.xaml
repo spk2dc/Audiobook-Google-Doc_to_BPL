@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1100,4395.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1389.6,6234.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>WPL_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -45,6 +45,8 @@
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
       <x:String>System.Net</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Numerics</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -118,32 +120,35 @@
       <AssemblyReference>System.Net.Requests</AssemblyReference>
       <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
       <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="BPL" sap:VirtualizedContainerService.HintSize="1110.4,4330.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="BPL" sap:VirtualizedContainerService.HintSize="1400,6169.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="author" />
       <Variable x:TypeArguments="x:String" Name="title" />
+      <Variable x:TypeArguments="x:String" Name="year" />
+      <Variable x:TypeArguments="x:Int32" Name="index" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1048,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;BPL list(0): &quot;+list(0)]" />
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="login page" sap:VirtualizedContainerService.HintSize="1048,1140.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="Always" ScopeGuid="e88e0ff0-fc90-4416-b144-891fb7214841" Version="V2">
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1337.6,182.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;BPL list(0): &quot;+list(0)]" />
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="login page" sap:VirtualizedContainerService.HintSize="1337.6,5898.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="Always" ScopeGuid="e88e0ff0-fc90-4416-b144-891fb7214841" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1014.4,924" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1304,5658.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'login'" sap:VirtualizedContainerService.HintSize="952,810.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e88e0ff0-fc90-4416-b144-891fb7214841" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'login'" sap:VirtualizedContainerService.HintSize="1241.6,850.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="e88e0ff0-fc90-4416-b144-891fb7214841" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,592" sap2010:WorkflowViewState.IdRef="Sequence_6">
                   <sap:WorkflowViewStateService.ViewState>
@@ -151,7 +156,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_31" SecureText="[(new System.Net.NetworkCredential(&quot;29999028547511&quot;, &quot;&quot;)).SecurePassword]" Version="V3">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'username'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,258.4" sap2010:WorkflowViewState.IdRef="NTypeInto_31" SecureText="[(new System.Net.NetworkCredential(&quot;29999028547511&quot;, &quot;&quot;)).SecurePassword]" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/user/login?destination=%2Fsuggested_purchases" ContentHash="l38P_KMWpkSBHee0s-XjIQ" DesignTimeRectangle="140, 732, 250, 38" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'username'" FullSelectorArgument="&lt;webctrl name='name' tag='INPUT' aaname='Username or Library Card Number :' /&gt;" FuzzySelectorArgument="&lt;webctrl name='name' tag='INPUT' aaname='Username or Library Card Number :' /&gt;" Guid="bbabd9fc-2783-4e8c-aac1-6a4f1ae825ec" InformativeScreenshot="c1bd2f195485055dd31f215b4217adf8.png" IsResponsive="True" Reference="O_gWsQZ_40yn-PKfMjq0sg/fc2qx-6PoECcqD3pscMopQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log In | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -163,7 +168,7 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_32" IsPassword="True" SecureText="[(new System.Net.NetworkCredential(&quot;2358&quot;, &quot;&quot;)).SecurePassword]" Version="V3">
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="387.2,243.2" sap2010:WorkflowViewState.IdRef="NTypeInto_32" IsPassword="True" SecureText="[(new System.Net.NetworkCredential(&quot;2358&quot;, &quot;&quot;)).SecurePassword]" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/user/login?destination=%2Fsuggested_purchases" ContentHash="dyWP17Uwy0ClP9m3tg9vGQ" DesignTimeRectangle="140, 809, 250, 38" DesignTimeScaleFactor="1.25" ElementType="InputBoxPassword" FriendlyName="'password'" FullSelectorArgument="&lt;webctrl type='password' name='user_pin' /&gt;" FuzzySelectorArgument="&lt;webctrl type='password' name='user_pin' /&gt;" Guid="11a32474-3fe3-4e97-8981-01bc035dd5d1" InformativeScreenshot="d8b6f19dcb55a437fd7d8f7b78dabeb5.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/9WIEahTBZUaqmnc-SKafCA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Log In | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -183,7 +188,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,144" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Already logged in&quot;]" />
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Already logged in&quot;]" />
                 </Sequence>
               </uix:NCheckState.IfNotExists>
               <uix:NCheckState.Target>
@@ -196,6 +201,244 @@
                 </uix:TargetAnchorable>
               </uix:NCheckState.Target>
             </uix:NCheckState>
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[index]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="1241.6,4720" sap2010:WorkflowViewState.IdRef="ForEach`1_1" MaxIterations="20" Values="[list]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="x:String">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1208,4529.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1145.6,184" sap2010:WorkflowViewState.IdRef="LogMessage_4" Message="[index.ToString+&quot;: &quot;+currentItem]" />
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'add'" sap:VirtualizedContainerService.HintSize="1145.6,197.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e88e0ff0-fc90-4416-b144-891fb7214841" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases" ContentHash="CCM6U6q1V0CVd6fL0IrxSQ" DesignTimeRectangle="1631, 582, 158, 46" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'add'" FullSelectorArgument="&lt;webctrl tag='BUTTON' innertext='Add Suggestion' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' innertext='Add Suggestion' check:text='Add Suggestion' /&gt;" Guid="20365e36-d17b-4be1-947e-acddb7669795" InformativeScreenshot="48f1d3655113736c0f29edb38658be44.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/wikfyEjmJ0WO-Nf0uSlgFA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="overlay" sap:VirtualizedContainerService.HintSize="1145.6,4061.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Version="V2">
+                      <uix:NApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="x:Object">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1112,3821.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <Assign sap:VirtualizedContainerService.HintSize="1049.6,122.4" sap2010:WorkflowViewState.IdRef="Assign_5">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[title]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[currentItem.Split(" by.")(0)]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Assign sap:VirtualizedContainerService.HintSize="1049.6,122.4" sap2010:WorkflowViewState.IdRef="Assign_6">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[author]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[currentItem.Split(" by.")(1).Split(" - year ")(0)]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Assign sap:VirtualizedContainerService.HintSize="1049.6,122.4" sap2010:WorkflowViewState.IdRef="Assign_8">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[year]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[currentItem.Split(" by.")(1).Split(" - year ")(1).Split(",")(0)]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'title'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1049.6,258.4" sap2010:WorkflowViewState.IdRef="NTypeInto_25" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Text="[title]" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable ContentHash="ox14rYVTGkaq2gw1mDopCw" DesignTimeRectangle="676, 649, 565, 39" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'title'" FullSelectorArgument="&lt;ctrl name='Suggested Purchases | Boston Public Library | BiblioCommons' text='https://bpl.bibliocommons.com/suggested_purchases#overlay868' /&gt;&lt;ctrl name='Title, required field' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Suggested Purchases | Boston Public Library | BiblioCommons' text='https://bpl.bibliocommons.com/suggested_purchases#overlay868' /&gt;&lt;ctrl name='Title, required field' role='editable text' /&gt;" Guid="0da4596c-e0df-4e5a-bfc0-208b7658a1ea" InformativeScreenshot="5bd7586dd8d2ae7b268d6886c9361d57.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/wl5aOJVHDUCW-hZgEV5sSg" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Suggested Purchases | Boston Public Library | BiblioCommons - Go*' /&gt;" SearchSteps="FuzzySelector" SelectionStrategy="AA" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="676, 619, 565, 27" ElementType="InputBox" FriendlyName="'title'" FullSelectorArgument="&lt;ctrl name='Suggested Purchases | Boston Public Library | BiblioCommons' text='https://bpl.bibliocommons.com/suggested_purchases#overlay868' /&gt;&lt;ctrl role='editable text' text=' Title, required field' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Suggested Purchases | Boston Public Library | BiblioCommons' text='https://bpl.bibliocommons.com/suggested_purchases#overlay868' /&gt;&lt;ctrl role='editable text' text=' Title, required field' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAjkAAAAfCAYAAAAFgdxvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMrSURBVHhe7d3dS1NhAMfx/oxIZRoiziwLFXbRCyzFyJfEpuEotByCUImwEC9UEE3EYEMIUYaIaOBAJoIK7cY77/uHfu1sx51tPoqtiXX2vfjA9pznOd5+Oc9z5q3bdyoEAADgNkQOAABwJSIHAAC4EpEDAABcicgBAACuROQAAABXInIAAIArFRc5nieaWljW5rdJhR4arhuEVw908tOyrUi7eU5xahX7MKRf40NKtJquAwCAcpSNHCdCLhNV2Jo/Gs2OHc36z93U5Poip0pLA1bk9CnmNV0HAADlqLjIaZ/U/mHq+/Gu1oe9zg3vjWnHmhefVuBszFbayKnRUnebtp416H1NlWZ636Uip1PRuioFGpsU6+pQrNm0DgAAlIts5NQ/8KnNZ3szpyM7bI4WB5xxX5PqcxYXavuykQmZa4+c+0qMZ7aoLnL6vNawDgAAlAvzmZz2aSdyTNtRhdtVnhaNza4paY/lWQ2l11wcObUKfPyq+N5edk0y/l2RYIvuZucUqKzRRCq45i1d3U7cjPgVtcenvFXmtQAAoCyUJnJy5p9zaeR4FV7ZzZ+fIx72OX/TpLJOWyErcAI6HbG2rAaVaPWY5wIAgLJSmshJj/sViduBctXtqlfOtlgyFUNtntSYp0VTa/ZTncNljVtjBffK8Gjm9WDmCU7/I/kbH+vU+vyplwPIAADgZiMnOLftjL3Mmd83Z2997Wn9bc54gReNzUoMp6Kmwfru0VJ/QCddTQpWnp8LAADKy41GjjOWcrCr5L7twDmfszmafx8AAICr+Hci5wJEDgAAKMaNRk5o8ezQ8YbmffnzAQAA/kYJI8en+e2ckOm3flfHr1B35g0pU+TkHTyOfVawoToz7vHqafeQIgtj6knfGwAA4M+UMHIqFJg9O0ic49JXyKsVNK05Y3giBAAAcBUljZz0P+5c2VDy2I6Uwz3tz3Wmr5kjx1KtnuFp7fxwDhtbb1Ul42tan+hQc3YeAADA1ZkjBwAA4D9H5AAAAFcicgAAgCsROQAAwJWIHAAA4EpEDgAAcCUiBwAAuBKRAwAAXInIAQAArkTkAAAAF6rQb0ZxV5M91GpAAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'author'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1049.6,258.4" sap2010:WorkflowViewState.IdRef="NTypeInto_26" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Text="[author]" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay518" ContentHash="2ctrMvhnVUKBXHBrEY-sMg" DesignTimeRectangle="676, 796, 565, 38" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'author'" FullSelectorArgument="&lt;webctrl tag='INPUT' name='author' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' name='author' /&gt;" Guid="03592d42-0c8d-4a49-a211-ed6914e3a75f" InformativeScreenshot="17511f23d9a5213e340e44c15813e77e.png" IsResponsive="True" Reference="O_gWsQZ_40yn-PKfMjq0sg/IViCU0Meu0GXmp2cN9Dfow" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="676, 714, 565, 26" ElementType="Text" FriendlyName="'author'" FullSelectorArgument="&lt;webctrl parentid='overlay' tag='LABEL' innertext='Author, Performer, or Director * Author, Performer, or Director, required field' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' innertext='Author, Performer, or Director * Author, Performer, or Director, required field' check:text='Author, Performer, or Director * Author, Performer, or Director, required field' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'year'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1049.6,258.4" sap2010:WorkflowViewState.IdRef="NTypeInto_28" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Text="[year]" Version="V3">
+                              <uix:NTypeInto.Target>
+                                <uix:TargetAnchorable ContentHash="xcagQ5sFjU-H5LM6QblqRw" DesignTimeRectangle="676, 919, 70, 39" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'year'" FullSelectorArgument="&lt;ctrl name='Suggested Purchases | Boston Public Library | BiblioCommons' role='document' /&gt;&lt;ctrl name='Publication Year, required field' role='editable text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Suggested Purchases | Boston Public Library | BiblioCommons' role='document' /&gt;&lt;ctrl name='Publication Year, required field' role='editable text' automationid='' /&gt;" Guid="ef8226ee-49bf-437a-965e-aa3bdb30d674" InformativeScreenshot="de3c9cd7d2bdf2719c3c6563b8dbe0a4.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/UPpGM6DKj0-QkdprYony2g" ScopeSelectorArgument="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Suggested Purchases | Boston Public Library | BiblioCommons - Go*' /&gt;" SearchSteps="Selector" SelectionStrategy="AA" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="676, 859, 565, 27" ElementType="InputBox" FriendlyName="'year'" FullSelectorArgument="&lt;ctrl name='Suggested Purchases | Boston Public Library | BiblioCommons' role='document' /&gt;&lt;ctrl role='editable text' text=' Publication Year, required field' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Suggested Purchases | Boston Public Library | BiblioCommons' role='document' /&gt;&lt;ctrl role='editable text' text=' Publication Year, required field' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NTypeInto.Target>
+                            </uix:NTypeInto>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'next'" sap:VirtualizedContainerService.HintSize="1049.6,197.6" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay495" ContentHash="Viqv3VlOSEGMA_dguuMMbA" DesignTimeRectangle="1142, 932, 99, 46" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'next'" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='     Next      ' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' aaname='     Next      ' check:text='Next' /&gt;" Guid="43d2753a-62a7-4012-b8c7-39d166e5dab6" InformativeScreenshot="41a8bc562f05630c553c8172cf01dd6b.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/ePi_IApIbUa2kJgyRYHt3Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NSelectItem DisplayName="Select Item 'format'" sap:VirtualizedContainerService.HintSize="1049.6,197.6" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="Downloadable Audiobook" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Version="V3">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay335" ContentHash="eq0B0qQG_UerL5b6yz0pUQ" DesignTimeRectangle="676, 379, 565, 44" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'format'" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='Please select a format.' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' aaname='Please select a format.' check:text='Please select a format.' /&gt;" Guid="40066ded-b0da-47cd-bb21-fa3c4a6a768d" InformativeScreenshot="878aa02391cb339e7359f86df53d3a15.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/fORY2gJoOk-6Agiwpr4i8g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="676, 348, 64, 24" ElementType="Text" FriendlyName="'format'" FullSelectorArgument="&lt;webctrl aaname='Format' tag='SPAN' idx='11' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Format' tag='SPAN' check:text='Format' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEQAAAAcCAYAAADYzhkoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALCSURBVFhH7ZZBaxpBFMf7MYI5RIIHRWgES1kolLIYaAlNSggetKAHCQjBQlkPFqwgiYF6UEKCGEQ8uAEXhEVQIV76zf6d1Z3dt+NaalqFtnP4HXbmzeyb3+68mWc7gV1IXKQQASlEQAoRkEIEpBABKURAChGQQgS8Qs6b+P44WkETGo39R/n/hJxUMbHW08r59q8UomsKEgrlAGEa+5eSbwwXa1xXSO+ctC8RwtlFDYZhT24x6qKnHeE1jTssL77GYxtfo0EksjWYI+t5iPuPQn/sBT5dtTGZuvPpbL5w4AC5yh0mY7t9PIBeSZL3sHlPCrjtdDGbz+2O712o7kcMqSjd9N1+wqSiOjk/QUgE2s3AMyFlxsw7yToLHkJvNDFz4vpoHNJ+Ns4kch2GMB/832UUFSenzNXqfMyyvdiflINfErK0ZZ6HFjF8D1oMatDesz71Ay47fEFDJjOyiCULnjMdwGjX0bupQlPEfiaN/REJRUX+2vslzes0jlkOqWLbldotIM7zjqZxWckgFY9gnz3vv8yhx/+WcR15Hhdg7Xz8ultmCXuCVJUnO8DtKRmrfIZBYq3EPAse36EUI/Fiv1HGGW/fy0Hn7WYVOWdMGvd869B4H7SWHec5DDYgxH0RW+AeGeuXLF2wXwIr+0nibVvuHBUNw24nQsJq3q4hftvuDwlZVUO2LsTTviwkniW1acpqTsfaknUYQ7tt00KevGU2JMT9QF18e8XjNrBlVp4ynqJaRV4ViyoryAWforoNIW+CLCaI+GkZJh/vEUL+4lETJSt35QiZt3a+jPWFsBemKv7nuYX/scvYkJB3xe7iWcB84DlSIezK0FquM795D7EI4jhbhS5czPQvSSRoXdmCkB12cfNc6PjFLZq3TyoqhBFLotEh95ZRn13g3DuNV4hEChGRQgSkEAEpREAK8bCLH2UVV3XGSrs/AAAAAElFTkSuQmCC" SearchSteps="FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NSelectItem DisplayName="Select Item 'audience'" sap:VirtualizedContainerService.HintSize="1049.6,197.6" sap2010:WorkflowViewState.IdRef="NSelectItem_6" Item="Adult" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Version="V3">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay919" ContentHash="wguva4C9gU2WC2ysU_y5Jg" DesignTimeRectangle="676, 572, 565, 44" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'audience'" FullSelectorArgument="&lt;webctrl aaname='Please select an audience.' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Please select an audience.' tag='BUTTON' check:text='Please select an audience.' /&gt;" Guid="9e71bbe5-f44c-42d7-ace3-9bf8e1ba182e" InformativeScreenshot="5e78ffdcac85cf3d922448bbf58c2cad.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/cY1xX-ycn0OvNoOdBUW9dw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="676, 542, 81, 24" ElementType="Text" FriendlyName="'audience'" FullSelectorArgument="&lt;webctrl aaname='Audience' tag='SPAN' idx='11' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Audience' tag='SPAN' check:text='Audience' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFUAAAAcCAYAAAAQovP+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAQoSURBVGhD7ZjdaxpZGMb3zyjbi4jkIhJYAkIQSnMhhm5W0l1CNoEkkL2QUKEYWixiwQQkzYItKGKQSBALGlAYGIRaSG7ynz19ZzxnzjszZ2ylDm1hLh4wx2fOx2/O+2F+e/T7Y0RarCKoISiCGoIiqCEoghqCIqghKIIagiKoIejHQ92sYHI3xgNpcp52xjf2S+g036P14ini3P8LKABqDKdNwz7oVFcor+p8C5AWahr1kVy7gaL3mZ9ceqhLOfQcoFMNCgm/bxHSQk2gWB9O1+6XsOt95ieXFmr8pCFgdjHqC7DdApIa73crIPx/ZWmgJlC+ESBvSzh4de0Avki5vcW28HlD1HkpHlDLWZy1+85397eXON2vwPR5g8M/vr6HWruL+8/i+08GzGYeu8vK46xvVpFbTqPcZP5xFz1Nnl5J59H52Fe+O4P218DFjorQqUdEkD1XH4PzPWSW3HP5oa7mMRAP2YdcLWAk/h69Sbm880FNozaUfqYxbV58/irUzRJM59AemZfIy8M569PcpscnxnsnCtYG+eUe3Bqi9ffUk/zvfYCH9LGALTGXJR/UZOFKmGnCHWsshQuZAujm8ofngRo/ZpsyGihvp5DZPkaHgZ4NlUXQXR/17WXbu7JdddKH+Va8dLa+dY7eyywyqRRyFbqxctxJZ1m0DL/3+b951N9RBHg9Y9r7eozGYsi8vBLzGegcW2OW1wc1gbOueNgKHTG+9bYrFu2i9kT554Ga+1+GjXsDj3aqzkFnQqXiKSPo4TrHwpftuf8aGWuMQ21z7yE6n8T4qDIF9pfK6ffNQ337xjyT6jP23T9oiUi4rx86426oLNQf2nn7jdk6utQWk3mgKi+1Z64cpDqNmVBZQXv4bIX1UEmmBAlKs75vXo139Cqgw+EviXK4Wpu1nfTypN8FNfNG3sgZkpsh/TCoQfpOqIMXLIK4ONQg6aGmULvVmH1SyVuBcncGu+eqwstDqfCXuVroW5t/FkU81LSaBypLP4HhzzzeYq2TgvqEKqt4UNeT8kIzeZe1xw6qDF7tEM+tBH9UwWgs5rHGxaFU70saVpFPW6mFWqwbFUIzoXoKVesohRV7nIrVH2nkipeo7Yv9zgN1ieVZVqisIlpvN1DbtJ7jheoKZ38mBPwYksksiudVlNNyDQZVFaOA3MJ/ZckiFhSSY8o34jMHpW2pjOG33VRLa7QH9sK86p0I3zxQSVtF2Yt7RV2GDZUuBRUr59L5pHyWBFR+CH+TP1WMhbsK4Q1q3geGvG0GJjcV5NdVG+Y61Noe6jeqeba8uTVVvb8K1Z6DbveHa0w4XHqJZruCU9mZzAnVbo8OShjcssJDxdBsv0aO/c8j/tS6vdSWOTebRD8ARh8KOGA+V6GKtBhFUENQBDUERVBDUAQ1BEVQF67H+AJK6rizYPgkKAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NSelectItem DisplayName="Select Item 'content'" sap:VirtualizedContainerService.HintSize="1049.6,197.6" sap2010:WorkflowViewState.IdRef="NSelectItem_7" Item="Non-Fiction" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Version="V3">
+                              <uix:NSelectItem.Target>
+                                <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay919" ContentHash="1Tto0rtl-USKQQ_q8YRKXQ" DesignTimeRectangle="676, 671, 565, 44" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'content'" FullSelectorArgument="&lt;webctrl aaname='Please select a content type.' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Please select a content type.' tag='BUTTON' check:text='Please select a content type.' /&gt;" Guid="b5b3669f-0bcb-4d78-bca1-7b3d9dd2fa31" InformativeScreenshot="508d5e1869e8fbab546812c928bd584f.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/4Ch1Y9rSNkqe052_kZFkYQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="676, 641, 71, 24" ElementType="Text" FriendlyName="'content'" FullSelectorArgument="&lt;webctrl aaname='Content' tag='SPAN' idx='11' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Content' tag='SPAN' check:text='Content' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEsAAAAcCAYAAAApxUKlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANySURBVGhD7ZdPaxpBGIf7MaQ5GCQHRWiElrJQzGExtDSYesgfiAELlYAQUipbigEVJG1BC4oYRBHxYAIKwiJoIF7yzX6d0dndGZ2kToqh0D08l5l33515dt6Z2Wee52twWQ5XlgKuLAVcWQq4shRwZSngylLAlaWAK0sBuawNHUa+AnM4wN3tcMawi341C+NdAD7ZM/8BC7J879PoD5kgCZNqfPWygilc0ff1s9iT9a+IxPfedI6dE3m/KMsbQ23AiWkXkNnXEYnGkaMrbdRF7QMXvyIiX9uzMTyprDiao9m8l5L18uzSEVVPYovrk+J9hdS5WK6T/iVqH8PC6jPqrO9nDH49hc41F39dQia87uTLNzBhfQJkPFY+3+sDFOttTG5Y32gAs5rC3obzTs92FuPpsw3kQjTvJcZMxt2oh6v8gT2/6Zj6rE+gi/K2k5OTFUCubQW1UXzjBMnRUbzmE4uY+be2MEvW3bAnFzGqwAiSWHuCEixZ299gWpLmMX8g5WXj43JNTG7v5RjndXF8C9wri5SgyYLMApJ2uxxhFbbSSOoaKdcEmr3FFwmDGVSQiZJYLYZi15lE/0uA5dZRtr7yQhkGkGmxPpo/ujFt90cLthjzXJvFCuIH6Bfi2NU07H4qOe38PE8qLHapMkyiYyX5416xjkyDxdJlTleF1XdcsleP7Mt1TljJ3RP7oCxvcrbxUxpJrtS5quimEaFtvCwhj4aLLmu/JSvaaleTpbKyxAkd8X0aOU3ZS63ScWSJy5qf0FKyeAE3A1JepKwtrNK0nuFjuf2O4ozn0bJ4421caGKgyD8g6z6eRtYa9vJd+4FxwdmgF3lsGf6lrOCZ/SEm5bjTLmPVsjwhZzCUcTUNg96z9BiM0zRqrTaaiVmsuMGf4YhsnuIG37PvZGqy+BVO4vfpYaAjSQ6F+Q2+dqzBz3L5X5AY4weKh4u5l5LFfeRJPTU9DCLRHRxxC0GURdgihqXHO8OxvkleKj+SKdKrw1KyxBVuY004RA6iB/4w7PGpygqSvNY9zEYc74Isii+cQJle+viHyR3JbBVgCPevTSSM0tyltIHmqW5/cYqqLI83jEx17tJZ2HH6QzvI/WpgzEuj46tn8dkan6oswtZhFlcDfi7kmsPt3VJZLnJcWQq4shRwZSngylLAlbU0a/gNAl+l9ekjjdEAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NSelectItem.Target>
+                            </uix:NSelectItem>
+                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'next'" sap:VirtualizedContainerService.HintSize="1049.6,197.6" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Version="V3">
+                              <uix:NClick.Target>
+                                <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay495" ContentHash="Viqv3VlOSEGMA_dguuMMbA" DesignTimeRectangle="1142, 932, 99, 46" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'next'" FullSelectorArgument="&lt;webctrl tag='BUTTON' aaname='     Next      ' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' aaname='     Next      ' check:text='Next' /&gt;" Guid="43d2753a-62a7-4012-b8c7-39d166e5dab6" InformativeScreenshot="41a8bc562f05630c553c8172cf01dd6b.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/ePi_IApIbUa2kJgyRYHt3Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                              </uix:NClick.Target>
+                            </uix:NClick>
+                            <uix:NCheckState DisplayName="Check App State 'already owned'" sap:VirtualizedContainerService.HintSize="1049.6,715.2" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Version="V3">
+                              <uix:NCheckState.IfExists>
+                                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,456.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,184" sap2010:WorkflowViewState.IdRef="LogMessage_5" Message="[&quot;ALREADY owns book: &quot;+title]" />
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Cancel'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_18" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay76" DesignTimeRectangle="872, 804, 86, 46" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Cancel'" FullSelectorArgument="&lt;webctrl aaname='       Cancel ' parentid='overlay' tag='BUTTON' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='       Cancel ' parentid='overlay' tag='BUTTON' type='button' class='btn btn-primary js-close-trigger hidden-xs' check:innerText='Cancel' /&gt;" Guid="7e0a3ba3-db31-414a-9a16-5a3357d5abee" InformativeScreenshot="b7581c28cdb7732d02f039b185162e60.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                              </uix:NCheckState.IfExists>
+                              <uix:NCheckState.IfNotExists>
+                                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,272.8" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'submit'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay136" ContentHash="FKS91exaBEelLfVxaf2kvw" DesignTimeRectangle="1122, 470, 119, 46" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'submit'" FullSelectorArgument="&lt;webctrl tag='BUTTON' innertext='     Submit      ' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' innertext='     Submit      ' check:text='Submit' /&gt;" Guid="87d8d538-a1b7-4c8c-af64-7f4d2f9c94fb" InformativeScreenshot="7363458e63814d5bda38d4fa69c22e7d.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/TYxBjM4abUypiE5yEFcuKQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                </Sequence>
+                              </uix:NCheckState.IfNotExists>
+                              <uix:NCheckState.Target>
+                                <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay776" ContentHash="JAWxjhcqMkapbUp9nIbezw" DesignTimeRectangle="676, 531, 565, 26" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'already owned'" FullSelectorArgument="&lt;webctrl tag='P' aaname='The library already owns these titles:' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' aaname='The library already owns these titles:' check:text='The library already owns these titles:' /&gt;" Guid="e3a1bbb7-867e-44a4-ae9b-a26f0b0117cb" InformativeScreenshot="9b7baccdda35785aa04371b751af1f29.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/PP7_Mw4wgUyn4OTDbqKL-Q" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target DesignTimeRectangle="676, 670, 565, 65" ElementType="Text" FriendlyName="'already owned'" FullSelectorArgument="&lt;webctrl tag='DIV' aaname='     Do you still want to submit your suggestion?   ' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' aaname='     Do you still want to submit your suggestion?   ' check:text='Do you still want to submit your suggestion?' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NCheckState.Target>
+                            </uix:NCheckState>
+                            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1049.6,888" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                              <ui:CommentOut.Body>
+                                <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="1014.4,784.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NCheckState DisplayName="Check App State 'already suggested'" sap:VirtualizedContainerService.HintSize="952,698.4" sap2010:WorkflowViewState.IdRef="NCheckState_3" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Version="V3">
+                                    <uix:NCheckState.IfExists>
+                                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,456.8" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="387.2,184" sap2010:WorkflowViewState.IdRef="LogMessage_6" Message="[&quot;ALREADY suggested: &quot;+title]" />
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'cancel'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" Version="V3">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay776" ContentHash="EjSgmW9jpUiSC3JA1ymFlw" DesignTimeRectangle="872, 761, 86, 46" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Cancel'" FullSelectorArgument="&lt;webctrl aaname='       Cancel ' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='       Cancel ' tag='BUTTON' check:text='Cancel' /&gt;" Guid="a5b29b46-2de1-4f91-94bc-74e442f8da66" InformativeScreenshot="bb9313ef538eea46e7d0919d6d1aa434.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/n7Rr3XVnEUKLPYBqEQHeGg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                              <uix:TargetAnchorable.Anchors>
+                                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                                  <uix:Target DesignTimeRectangle="1055, 761, 186, 46" ElementType="Button" FriendlyName="'Submit Anyway'" FullSelectorArgument="&lt;webctrl aaname='       Submit Anyway        ' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='       Submit Anyway        ' tag='BUTTON' check:text='Submit Anyway' /&gt;" SearchSteps="FuzzySelector" />
+                                                </scg:List>
+                                              </uix:TargetAnchorable.Anchors>
+                                            </uix:TargetAnchorable>
+                                          </uix:NClick.Target>
+                                        </uix:NClick>
+                                      </Sequence>
+                                    </uix:NCheckState.IfExists>
+                                    <uix:NCheckState.IfNotExists>
+                                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,271.2" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'submit'" sap:VirtualizedContainerService.HintSize="387.2,182.4" sap2010:WorkflowViewState.IdRef="NClick_19" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Version="V3">
+                                          <uix:NClick.Target>
+                                            <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay136" ContentHash="FKS91exaBEelLfVxaf2kvw" DesignTimeRectangle="1122, 470, 119, 46" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'submit'" FullSelectorArgument="&lt;webctrl tag='BUTTON' innertext='     Submit      ' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' innertext='     Submit      ' check:text='Submit' /&gt;" Guid="87d8d538-a1b7-4c8c-af64-7f4d2f9c94fb" InformativeScreenshot="7363458e63814d5bda38d4fa69c22e7d.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/TYxBjM4abUypiE5yEFcuKQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                                          </uix:NClick.Target>
+                                        </uix:NClick>
+                                      </Sequence>
+                                    </uix:NCheckState.IfNotExists>
+                                    <uix:NCheckState.Target>
+                                      <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay474" ContentHash="pGuQNbn87E-pGPhYm15oZQ" DesignTimeRectangle="676, 346, 565, 26" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'already suggested'" FullSelectorArgument="&lt;webctrl tag='P' visibleinnertext='You already suggested the following on Mar 18, 2024:' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' visibleinnertext='You already suggested the following*' check:text='You already suggested the following*' /&gt;" Guid="e9239be3-d113-4a2b-a3f2-275a9961ac1a" InformativeScreenshot="d1acffbcbb94a40d0f9777dd3132739b.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/g-MEzt11W06vZZp19K63XA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target DesignTimeRectangle="676, 291, 290, 41" ElementType="Text" FriendlyName="'already suggested'" FullSelectorArgument="&lt;webctrl tag='SPAN' visibleinnertext='Submit a Suggestion' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' visibleinnertext='Submit a Suggestion' check:text='Submit a Suggestion' /&gt;" SearchSteps="FuzzySelector" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NCheckState.Target>
+                                  </uix:NCheckState>
+                                </Sequence>
+                              </ui:CommentOut.Body>
+                            </ui:CommentOut>
+                          </Sequence>
+                        </ActivityAction>
+                      </uix:NApplicationCard.Body>
+                      <uix:NApplicationCard.TargetApp>
+                        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="z7GM38VlP02GIsKMnyM-Yg" IconBase64="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" InformativeScreenshot="bee85f012678a88de4e4cefcce11d987.jpg" Reference="O_gWsQZ_40yn-PKfMjq0sg/u8iEErMGHkuRv8qnHCYQ7A" Selector="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" Title="Suggested Purchases | Boston Public Library | BiblioCommons" Url="https://bpl.bibliocommons.com/suggested_purchases#overlay269" />
+                      </uix:NApplicationCard.TargetApp>
+                    </uix:NApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
           </Sequence>
         </ActivityAction>
       </uix:NApplicationCard.Body>
@@ -203,146 +446,5 @@
         <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="xWzICe9140q8Wr_QboCWCA" IconBase64="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" InformativeScreenshot="338e163d7f00e48097373990fbb52aae.jpg" Reference="O_gWsQZ_40yn-PKfMjq0sg/pWmCT0wMKUqJcSI0wqZBdg" Selector="&lt;html app='chrome.exe' title='Log In | Boston Public Library | BiblioCommons' /&gt;" Title="Log In | Boston Public Library | BiblioCommons" Url="https://bpl.bibliocommons.com/user/login?destination=%2Fsuggested_purchases" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[list.Count() &gt;1]" DisplayName="While" sap:VirtualizedContainerService.HintSize="1048,2855.2" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
-      <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="572.8,2718.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="suggest" sap:VirtualizedContainerService.HintSize="529.6,486.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" IsCVEnabled="False" OpenMode="Always" ScopeGuid="3a89db22-bbb9-4ba5-bafc-66599babb7c7" Version="V2">
-            <uix:NApplicationCard.Body>
-              <ActivityAction x:TypeArguments="x:Object">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,269.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'add'" sap:VirtualizedContainerService.HintSize="387.2,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3a89db22-bbb9-4ba5-bafc-66599babb7c7" Version="V3">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases" ContentHash="CCM6U6q1V0CVd6fL0IrxSQ" DesignTimeRectangle="1631, 582, 158, 46" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'add'" FullSelectorArgument="&lt;webctrl tag='BUTTON' innertext='Add Suggestion' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' innertext='Add Suggestion' check:text='Add Suggestion' /&gt;" Guid="20365e36-d17b-4be1-947e-acddb7669795" InformativeScreenshot="48f1d3655113736c0f29edb38658be44.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/wikfyEjmJ0WO-Nf0uSlgFA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
-                    </uix:NClick.Target>
-                  </uix:NClick>
-                </Sequence>
-              </ActivityAction>
-            </uix:NApplicationCard.Body>
-            <uix:NApplicationCard.TargetApp>
-              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="Ibl28gROk0Wf40oaGKC5eQ" IconBase64="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" InformativeScreenshot="c36145413284e6a199a40425a01c8afb.jpg" Reference="O_gWsQZ_40yn-PKfMjq0sg/TyeONOTnYkeEa_1f-5IOtg" Selector="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" Title="Suggested Purchases | Boston Public Library | BiblioCommons" Url="https://bpl.bibliocommons.com/suggested_purchases" />
-            </uix:NApplicationCard.TargetApp>
-          </uix:NApplicationCard>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="overlay" sap:VirtualizedContainerService.HintSize="529.6,2102.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Version="V2">
-            <uix:NApplicationCard.Body>
-              <ActivityAction x:TypeArguments="x:Object">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,1885.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="433.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_5">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[title]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[list.ElementAt(list.Count()).Split(" by")(0)]</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                  <Assign sap:VirtualizedContainerService.HintSize="433.6,82.4" sap2010:WorkflowViewState.IdRef="Assign_6">
-                    <Assign.To>
-                      <OutArgument x:TypeArguments="x:String">[author]</OutArgument>
-                    </Assign.To>
-                    <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[list.ElementAt(list.Count()).Split(" by")(1).Split(" - ")(0)]</InArgument>
-                    </Assign.Value>
-                  </Assign>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'title'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_25" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Text="[title]" Version="V3">
-                    <uix:NTypeInto.Target>
-                      <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay269" ContentHash="xzy-Tz04fEqPte7rTCA84g" DesignTimeRectangle="676, 682, 565, 38" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'title'" FullSelectorArgument="&lt;webctrl id='title' tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl id='title' tag='INPUT' type='text' /&gt;" Guid="74e59751-2301-472f-b1d2-db40507918ca" InformativeScreenshot="bff05f3f2238717a964350c257b4559f.png" IsResponsive="True" Reference="O_gWsQZ_40yn-PKfMjq0sg/wl5aOJVHDUCW-hZgEV5sSg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target DesignTimeRectangle="676, 651, 39, 24" ElementType="Text" FriendlyName="'title'" FullSelectorArgument="&lt;webctrl aaname='Title' parentid='overlay' tag='SPAN' innertext='Title' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Title' parentid='overlay' tag='SPAN' innertext='Title' check:text='Title' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAAcCAYAAAD4IkbVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHLSURBVFhH7ZZLSwJRGIb7GZGLkWihBRXkYja1ECUoNAgrGIJciCBEEUyICxEkc2GgCCFKiAsNHBBEUKHZ9M/e5nKcM6NHazGDSrN4FvPOd77zOOeCG5tbHqwLrqxTuLJO4co6xT+Q5Y6RKZTQeksjcch4z0CsDfD9pdJGOcyu+Q1DljZbRAWiWp+sGNkoF5xpymJ5suE0+kPledxFI+6nDfdS6Kh1UhaxSUawVda3zyPEE27yGBHBUfGa5vwBfKbB04Sem7qQ07IWwlkqy1rm6W3ABZDK1SGTzEItoY2ZL7uD2P0rpF7PGCNL7ygLAWwbNTr2yJrqZ1go64dY7VrrTUgiT+dUsEdWy4MoS2Siv26DC7rdZOVHhTglU1YpUydfeVjCo5qRHkuVFfJtmp2Z6i/zZEv10Lil+VJlaaYw6ELuEwZ0/7aStMfqyM5hZWQTxcnhauKFt9azsFGWx0vbJHSl3stBJCL6iWbJWg7YxwOEXa+ec36cRO5QLqQQ1Xrr2CjrQSw3OTAmFl5dXgisMROmVshWWe0PTrUJeUwmG/bQz59r79iyKl5E41l0PumhUm8BWaqj8XSKI6NunuyK4so6hSvrFGsk68EPYp7gwePg6pEAAAAASUVORK5CYII=" SearchSteps="FuzzySelector" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NTypeInto.Target>
-                  </uix:NTypeInto>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'author'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_26" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Text="[author]" Version="V3">
-                    <uix:NTypeInto.Target>
-                      <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay269" ContentHash="d872nrqr2kCr7vWfJ1Dv5w" DesignTimeRectangle="676, 828, 565, 38" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'author'" FullSelectorArgument="&lt;webctrl id='author' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='author' tag='INPUT' /&gt;" Guid="7e7b1a43-2299-4c65-92df-963aafcfb0c3" InformativeScreenshot="e63ba8a39fb1bef23e42d9a3986076df.png" IsResponsive="True" Reference="O_gWsQZ_40yn-PKfMjq0sg/IViCU0Meu0GXmp2cN9Dfow" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target DesignTimeRectangle="676, 746, 565, 26" ElementType="Text" FriendlyName="'author'" FullSelectorArgument="&lt;webctrl tag='LABEL' innertext='Author, Performer, or Director * Author, Performer, or Director, required field' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' innertext='Author, Performer, or Director * Author, Performer, or Director, required field' check:text='Author, Performer, or Director * Author, Performer, or Director, required field' /&gt;" SearchSteps="FuzzySelector" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NTypeInto.Target>
-                  </uix:NTypeInto>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'year'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_28" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Version="V3">
-                    <uix:NTypeInto.Target>
-                      <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay269" ContentHash="e2tah_kuVUSLpLT0l_Er1w" DesignTimeRectangle="676, 952, 70, 38" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'year'" FullSelectorArgument="&lt;webctrl tag='INPUT' name='publication_year' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' name='publication_year' /&gt;" Guid="23fd7782-0309-4f99-9888-a91cda99181f" InformativeScreenshot="1b52579eb8fee5660821dffbdd859331.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/UPpGM6DKj0-QkdprYony2g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target DesignTimeRectangle="676, 892, 565, 26" ElementType="Text" FriendlyName="'year'" FullSelectorArgument="&lt;webctrl tag='LABEL' innertext='Publication Year * Publication Year, required field' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' innertext='Publication Year * Publication Year, required field' check:text='Publication Year * Publication Year, required field' /&gt;" SearchSteps="FuzzySelector" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NTypeInto.Target>
-                  </uix:NTypeInto>
-                  <uix:NSelectItem DisplayName="Select Item 'format'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="Downloadable Audiobook" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Version="V3">
-                    <uix:NSelectItem.Target>
-                      <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay283" ContentHash="thVqWvqFGEWj1dMsG6ldlQ" DesignTimeRectangle="702, 555, 211, 26" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'format'" FullSelectorArgument="&lt;webctrl tag='SPAN' innertext='Downloadable Audiobook' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' innertext='Downloadable Audiobook' check:text='Downloadable Audiobook' /&gt;" Guid="ff8c69a7-7741-4f76-ad44-114a0bf48aea" InformativeScreenshot="498e8957b7a1313d4b57319347a0da85.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/fORY2gJoOk-6Agiwpr4i8g" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target DesignTimeRectangle="676, 368, 64, 24" ElementType="Text" FriendlyName="'format'" FullSelectorArgument="&lt;webctrl tag='SPAN' innertext='Format' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' innertext='Format' check:text='Format' /&gt;" SearchSteps="FuzzySelector" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NSelectItem.Target>
-                  </uix:NSelectItem>
-                  <uix:NSelectItem DisplayName="Select Item 'audience'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_6" Item="Adult" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Version="V3">
-                    <uix:NSelectItem.Target>
-                      <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay283" ContentHash="ihiS9fXDG0Ca75wosQoteg" DesignTimeRectangle="677, 678, 563, 33" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'audience'" FullSelectorArgument="&lt;webctrl tag='A' innertext='Adult' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='A' innertext='Adult' check:text='Adult' /&gt;" Guid="32a989e3-7c17-47c0-a5f2-a504082bc71e" InformativeScreenshot="8d3ab0d8f8dd8d8a1b9ba40f7267df5b.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/cY1xX-ycn0OvNoOdBUW9dw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target DesignTimeRectangle="676, 562, 81, 24" ElementType="Text" FriendlyName="'audience'" FullSelectorArgument="&lt;webctrl tag='SPAN' innertext='Audience' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' innertext='Audience' check:text='Audience' /&gt;" SearchSteps="FuzzySelector" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NSelectItem.Target>
-                  </uix:NSelectItem>
-                  <uix:NSelectItem DisplayName="Select Item 'content'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_7" Item="Non-Fiction" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Version="V3">
-                    <uix:NSelectItem.Target>
-                      <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay283" ContentHash="ElMKuC1zJEar-uRaT6MHZg" DesignTimeRectangle="702, 814, 94, 26" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'content'" FullSelectorArgument="&lt;webctrl tag='SPAN' innertext='Non-Fiction' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' innertext='Non-Fiction' check:text='Non-Fiction' /&gt;" Guid="25096eb4-fa15-4e8c-98c4-88b6a12851a1" InformativeScreenshot="cac717c390797d188c608cb3d7f8ce31.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/4Ch1Y9rSNkqe052_kZFkYQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
-                        <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                            <uix:Target DesignTimeRectangle="676, 661, 71, 24" ElementType="Text" FriendlyName="'content'" FullSelectorArgument="&lt;webctrl tag='SPAN' innertext='Content' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SPAN' innertext='Content' check:text='Content' /&gt;" SearchSteps="FuzzySelector" />
-                          </scg:List>
-                        </uix:TargetAnchorable.Anchors>
-                      </uix:TargetAnchorable>
-                    </uix:NSelectItem.Target>
-                  </uix:NSelectItem>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'submit'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="46b0a16f-10eb-43ee-b10d-6bb2e5920522" Version="V3">
-                    <uix:NClick.Target>
-                      <uix:TargetAnchorable BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay136" ContentHash="FKS91exaBEelLfVxaf2kvw" DesignTimeRectangle="1122, 470, 119, 46" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'submit'" FullSelectorArgument="&lt;webctrl tag='BUTTON' innertext='     Submit      ' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' innertext='     Submit      ' check:text='Submit' /&gt;" Guid="87d8d538-a1b7-4c8c-af64-7f4d2f9c94fb" InformativeScreenshot="7363458e63814d5bda38d4fa69c22e7d.png" Reference="O_gWsQZ_40yn-PKfMjq0sg/TYxBjM4abUypiE5yEFcuKQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
-                    </uix:NClick.Target>
-                  </uix:NClick>
-                </Sequence>
-              </ActivityAction>
-            </uix:NApplicationCard.Body>
-            <uix:NApplicationCard.TargetApp>
-              <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="z7GM38VlP02GIsKMnyM-Yg" IconBase64="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" InformativeScreenshot="bee85f012678a88de4e4cefcce11d987.jpg" Reference="O_gWsQZ_40yn-PKfMjq0sg/u8iEErMGHkuRv8qnHCYQ7A" Selector="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" Title="Suggested Purchases | Boston Public Library | BiblioCommons" Url="https://bpl.bibliocommons.com/suggested_purchases#overlay269" />
-            </uix:NApplicationCard.TargetApp>
-          </uix:NApplicationCard>
-        </Sequence>
-      </ui:InterruptibleWhile.Body>
-    </ui:InterruptibleWhile>
   </Sequence>
 </Activity>

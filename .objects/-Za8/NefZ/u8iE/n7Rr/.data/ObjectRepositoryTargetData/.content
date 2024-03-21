@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="EjSgmW9jpUiSC3JA1ymFlw" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://bpl.bibliocommons.com/suggested_purchases#overlay776" DesignTimeRectangle="872, 761, 86, 46" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Cancel'" FullSelectorArgument="&lt;webctrl aaname='       Cancel ' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='       Cancel ' tag='BUTTON' check:text='Cancel' /&gt;" Guid="a5b29b46-2de1-4f91-94bc-74e442f8da66" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggested Purchases | Boston Public Library | BiblioCommons' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="1055, 761, 186, 46" ElementType="Button" FriendlyName="'Submit Anyway'" FullSelectorArgument="&lt;webctrl aaname='       Submit Anyway        ' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='       Submit Anyway        ' tag='BUTTON' check:text='Submit Anyway' /&gt;" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="bb9313ef538eea46e7d0919d6d1aa434.png" xmlns="">0SatyrUlC7EaaxvE_-G3wHQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
